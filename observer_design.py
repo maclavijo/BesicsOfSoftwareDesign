@@ -1,12 +1,12 @@
 from abc import ABC, abstractmethod
 
-#Obeserver / Subscriber class
-
+#Create Obeserver / Subscriber class
 class Observer(ABC):
     @abstractmethod
     def update(self):
         raise NotImplementedError
-    
+
+#Create user from call Observer
 class User(Observer):
     def __init__(self,username):
         self.username = username
@@ -58,12 +58,15 @@ def main():
     DramaMovies = Drama()
     ActionMovies = Action()
 
+    #Add user to movie categories
     DramaMovies.addUser(peter)
     ActionMovies.addUser(peter)
 
+    #Add movies to categories and notify users
     DramaMovies.addMovie('Parasite')
     ActionMovies.addMovie('Fast and Furious')
 
+    #print results
     print('')
     print('############################')
     print('What are users watching now?')
@@ -71,9 +74,11 @@ def main():
     peter.watchMovie()
     print('')
 
+    # Add 2 more movies to categories and notify users
     ActionMovies.addMovie('Avengers')
     ActionMovies.addMovie('Justice League')
 
+    # print results
     print('')
     print('############################')
     print('What are users watching now?')
