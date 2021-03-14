@@ -1,5 +1,5 @@
 # BasicsOfSoftwareDesign
-### Output ###
+# Output #
 Observer Design Pattern Example
 ---------------------------------------
 Users are being notified of new movies:
